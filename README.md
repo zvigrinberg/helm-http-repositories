@@ -152,7 +152,7 @@ dependencies:
 ```shell
 [zgrinber@zgrinber helm-http-repositories]$  helm repo add github-pages  https://zvigrinberg.github.io/helm-http-repositories/
 ```
-8.Now you can [Repeat or use steps 9-12 in here](#regular-http-web-server-procedure) but with repo name `github-pages` \
+8.Now you can [Repeat or use steps 10-12 in here](#regular-http-web-server-procedure) but with repo name `github-pages` \
   Instead of `httpd-charts`
 
 9. See [How to import the remote chart into this sample local repo](./sample2/Chart.yaml), after configuring it, need to 
