@@ -9,6 +9,6 @@ entries:
     name: sample
     type: application
     urls:
-    - http://localhost:8080/charts/sample-0.1.0.tgz
+    - http://localhost:8081/charts/sample-0.1.0.tgz
     version: 0.1.0
 generated: "2022-04-27T18:10:24.810640208+03:00"

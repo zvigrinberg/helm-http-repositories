@@ -24,6 +24,6 @@ version: 0.1.0
 appVersion: "1.16.0"
 dependencies:
   - name: sample
-    repository: http://localhost:8080/charts
+    repository: http://localhost:8081/charts
     version: 0.1.0
 
