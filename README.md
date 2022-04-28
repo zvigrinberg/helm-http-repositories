@@ -105,7 +105,7 @@ drwxr-xr-x. 3 zgrinber zgrinber  162 Apr 28 15:47 templates
 
 ```
 
-13.Add as dependency to another chart(in this case add it as dependency to sample2 chart)
+13.Add as dependency to another chart(in this case add it as dependency to sample2 chart):
 ```yaml
 piVersion: v2
 name: sample2
