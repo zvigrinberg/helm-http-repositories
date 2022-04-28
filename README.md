@@ -125,3 +125,38 @@ dependencies:
 ```
 
 ### Github pages 
+
+1. Repository must be public(or need to purchase github pro), in order to activate github pages.
+2. At github, in the public repo, go to settings--> on the left side panel click on  \
+   Pages--> then on source choose main branch and choose the /docs folder
+3. Using helm , create some sample chart and pack it -
+[Follow steps 3-4 in here or reuse its outcome](#regular-http-web-server-procedure)
+4. create docs directory(if not exists) , copy the tgz packed chart to docs directory, and then change directory to docs:
+```shell
+[zgrinber@zgrinber helm-http-repositories]$ mkdir docs
+[zgrinber@zgrinber helm-http-repositories]$ cp sample/sample-0.1.0.tgz docs/
+[zgrinber@zgrinber helm-http-repositories]$ cd docs
+```
+5. Recreate the index with the server address of github pages, in my case it's:
+```shell
+[zgrinber@zgrinber docs]$ helm repo index . --url https://zvigrinberg.github.io/helm-http-repositories/
+```
+
+6. Now need to add docs directory to index , commit it, and push it to upstream repo at github:
+```shell
+[zgrinber@zgrinber helm-http-repositories]$ git add docs
+[zgrinber@zgrinber helm-http-repositories]$ git commit -m "add repo with 1 chart"
+[zgrinber@zgrinber helm-http-repositories]$ git push
+```
+7.Now add the repo to helm:
+```shell
+[zgrinber@zgrinber helm-http-repositories]$  helm repo add github-pages  https://zvigrinberg.github.io/helm-http-repositories/
+```
+8.Now you can [Repeat or use steps 9-12 in here](#regular-http-web-server-procedure) but with repo name `github-pages` \
+  Instead of `httpd-charts`
+
+9. See [How to import the remote chart into this sample local repo](./sample2/Chart.yaml), after configuring it, need to 
+  run the following command to pull it from the github helm repository
+```shell
+[zgrinber@zgrinber sample2]$ helm dependency update
+```

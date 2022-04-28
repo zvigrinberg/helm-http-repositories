@@ -1,6 +1,6 @@
 dependencies:
 - name: sample
-  repository: http://localhost:8080/charts
+  repository: https://zvigrinberg.github.io/helm-http-repositories/
   version: 0.1.0
-digest: sha256:bf11d4b5d1f6d6c33c665110cde1a94a3435ecfa3159e30196de283ea5551be5
-generated: "2022-04-27T19:07:08.549442657+03:00"
+digest: sha256:5cca1f300543c5abb64bb319b7f314ae961c2592aa233fafdcad325ef77079ca
+generated: "2022-04-28T18:07:17.474313213+03:00"
