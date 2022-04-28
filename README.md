@@ -55,7 +55,7 @@ Creating sample
 ```shell
 [zgrinber@zgrinber sample]$(echo sample-0.1.0.tgz ;  echo index.yaml) |  xargs -i curl -v -X PUT -T {} http://localhost:8081/charts/
 ```
-**Note: In Apache httpd web server, it supports PUT method for uploading files, but some other web server, supports the POST method, so need to check before that according to the web server documentation.**
+**Note: In Apache httpd web server, it supports PUT method for uploading files, but some other web server, supports the POST method, so need to check before that according to the chosen web server with its documentation.**
 8. You should get 201 response for the 2 files, kindly verify with the following command that files indeed uploaded to server :
 ```html
 [zgrinber@zgrinber sample]$ curl -L -X GET localhost:8081/charts 
