@@ -17,7 +17,7 @@
 - Will demonstrate with a sample apache httpd http web server that will be deployed as a container using podman/docker.
    - Will create a custom image with base image of apache httpd, in order to configure the httpd web server to support free unauthenticated access to get and put/post files from/to server.
    - This is only demo , in real you should use web server protected with at least basic authentication of user/password or 
-     with a Bearer <token>(more secured) 
+     with a Bearer TOKEN (more secured), pulled from token generation endpoint after authenticating against the server.
 - Will demonstrate with github pages, which is free for public repositories 
  
 ### Regular HTTP Web server Procedure:
